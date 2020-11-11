@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Godziny</title>
+</head>
+<body>
+   
+    <h3>
+    <p>Lublin : <span id="clock"></span></p> <br>
+    <p>Sydney: <span id="clock2"></span></p> <br>
+    <p>Nowy York:: <span id="clock3"></span></p> <br>
+    </h3>
+    <script >  
+    (function () {
+
+let clockElement = document.getElementById( "clock" );
+let clockElement2 = document.getElementById( "clock2" );
+let clockElement3 = document.getElementById( "clock3" );
+function updateClock ( clock, clock2, clock3 ) {
+  clock.innerHTML = new Date().toLocaleString();
+  clock2.innerHTML = new Date().toLocaleString("en-US", {timeZone: "Australia/Sydney"});
+clock3.innerHTML = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+}
+
+setInterval(function () {
+    updateClock( clockElement, clockElement2, clockElement3 );
+}, 1000);
+
+}());
+    </script>
+   
+</body>
+</html>

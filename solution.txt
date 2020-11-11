@@ -1,0 +1,6 @@
+a) Pliki nalezy wypakowac w nowym folderze , a nastepnie w terminalu przejsc do tego folderu.
+b) docker build -t zadanie .
+
+c)docker run  --rm -it -p 8888:80 zadanie
+
+d)aby odpalic aplikacje, nalezy w przegladarce wpisac adres: localhost:8888
